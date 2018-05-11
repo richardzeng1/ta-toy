@@ -1,8 +1,18 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <div id="app">
+        <div id="page">
+            <navbar>
+                <h1>Tutorial Feedback</h1>
+            </navbar>
+            <div id="container">
+                <router-view></router-view>
+            </div>
+            <div id="footer">
+                <p>University of Toronto
+                </p>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -12,12 +22,61 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html,
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 18px;
+
+    line-height: 22px;
+    text-rendering: geometricPrecision;
+    display: flex;
+    flex-direction: column;
+}
+navbar,
+#footer {
+    display: block;
+    background-color: #002a5c;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+}
+navbar {
+    margin-bottom: 5px;
+}
+navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+navbar a:visited {
+    color: gray;
+}
+navbar h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.3em;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 700px;
 }
 </style>
