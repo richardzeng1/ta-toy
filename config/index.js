@@ -11,7 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/get_info': {
+        '/static/get_info.php': {
         target: 'http://localhost:3000',
         changeOrigin: true
       }

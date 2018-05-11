@@ -1,2 +1,9 @@
 .DS_Store
 dist/
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+src/_drafts
